@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "清爽多瑙影院",
+  "description": "去除多瑙影院广告和无用界面，更专心看视频",
+  "version": "0.8",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.dnvod.tv/*",
+    "*://*.dnvod.eu/*",
+    "*://*.duonao.tv/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.dnvod.tv/*",
+        "*://*.dnvod.eu/*",
+        "*://*.duonao.tv/*"
+      ],
+      "js": ["jquery-3.2.1.min.js","content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
