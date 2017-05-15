@@ -7,18 +7,24 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
+      .container{
+        width: 180px;
+        display: inline-block;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      .button {
+          background-color: #f44298;
+          border: none;
+          color: white;
+          padding: 3px;
+          text-align: center;
+          text-decoration: none;
+          display: block;
+          font-size: 14px;
+          margin: 6px, 0px;
+          cursor: pointer;
+          outline: none !important;
       }
     </style>
 
@@ -31,8 +37,10 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <div class="container"> 
+        <div>这个插件可以屏蔽多瑙的一些广告，简单净化一下界面 <br> <br>  感谢多瑙，让我们在海外的生活更精彩😊</div>
+        <a href="http://www.dnvod.tv/"  target="_blank" class="button">去多瑙影院</a>
+    </div>
   </body>
 </html>
 
