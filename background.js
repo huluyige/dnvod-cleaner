@@ -3,7 +3,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         return {cancel: true};
     },
     {
-        urls: ["*://*.dnvod.tv/upload/gaming/*"]
+        urls: ["*://*.dnvod.tv/upload/gaming/*", "*://*.dnvod.tv/upload/upload/*"]
     },
     ["blocking"]
 );

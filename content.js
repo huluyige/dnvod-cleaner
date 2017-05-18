@@ -30,5 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	$('div .r-gg').remove();
 	$('div .bfq-r').remove();
 	$('div .custom-contaienr').remove();
+	$('.box')[0].remove();
+	$('div .ybtb').remove();
+	document.getElementsByClassName('takemargin')[0].style.visibility="hidden";
     setTimeout(jumpAd, 4000);	
 });
