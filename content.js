@@ -19,19 +19,24 @@ function blockAjax(){
 //$("body").trigger("filterAds");
 document.addEventListener('DOMContentLoaded', function() {
 	blockAjax();
-	$('div .tgg').remove();
-	$('div .gg').remove();
-	$('div #myaudient2').remove();
-	$('div #msg_winw').remove();
-	$('div .ggw').remove();
-	$('div .foot').remove();
-	$('div .foot1').remove();
-	$("div[class*='ggw-']").remove();
-	$('div .r-gg').remove();
-	$('div .bfq-r').remove();
-	$('div .custom-contaienr').remove();
-	$('.box')[0].remove();
-	$('div .ybtb').remove();
-	document.getElementsByClassName('takemargin')[0].style.visibility="hidden";
-    setTimeout(jumpAd, 4000);	
+    setTimeout(jumpAd, 4000);
+	try {
+		$('div .tgg').remove();
+		$('div .gg').remove();
+		$('div #myaudient2').remove();
+		$('div #msg_winw').remove();
+		$('div .ggw').remove();
+		$('div .foot').remove();
+		$('div .foot1').remove();
+		$("div[class*='ggw-']").remove();
+		$('div .r-gg').remove();
+		$('div .bfq-r').remove();
+		$('div .custom-contaienr').remove();
+		$('div .ybtb').remove();
+		document.getElementsByClassName('takemargin')[0].style.visibility="hidden";
+		$('.box')[0].remove();
+	}
+	catch(err) {
+
+	}
 });
