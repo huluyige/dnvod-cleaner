@@ -1,5 +1,6 @@
 function jumpAd() {
 	//$('div .gg').remove();
+	$('div #msg_content').parent().remove();
     var yourCustomJavaScriptCode = '$("body").trigger("filterAds");';
     var script = document.createElement('script');
     var code = document.createTextNode('(function() {' + yourCustomJavaScriptCode + '})();');
@@ -9,6 +10,9 @@ function jumpAd() {
 
 }
 
+function removeMsg(){
+	$('div #msg_content').parent().remove();
+}
 function blockAjax(){
 	var yourCustomJavaScriptCode = '$(document).ajaxStop(function() {$(\'div .custom-contaienr\').remove();$(\'div .gg\').remove();;});';
     var script = document.createElement('script');
@@ -20,6 +24,7 @@ function blockAjax(){
 document.addEventListener('DOMContentLoaded', function() {
 	blockAjax();
     setTimeout(jumpAd, 4000);
+    setTimeout(removeMsg, 1000);	
 	try {
 		$('div .tgg').remove();
 		$('div .gg').remove();
