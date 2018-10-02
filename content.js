@@ -7,7 +7,14 @@ function jumpAd() {
     script.appendChild(code);
     document.getElementsByTagName('body')[0].appendChild(script);
 
+    try{
+    	var link = $('video')[0].attributes['src'].value;
+	    var outputb2 = '<a target="_blank" href="'+link+'" style="position: absolute; top: 0; left: 50%; font-size: 25px;font-weight: lighter;background: green;">去广告</a>';
+		$('.page-container').append(outputb2);
+ 	 }
+    catch(err) {
 
+	}
 }
 
 function removeMsg(){
