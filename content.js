@@ -6,15 +6,6 @@ function jumpAd() {
     var code = document.createTextNode('(function() {' + yourCustomJavaScriptCode + '})();');
     script.appendChild(code);
     document.getElementsByTagName('body')[0].appendChild(script);
-
-    try{
-    	var link = $('video')[0].attributes['src'].value;
-	    var outputb2 = '<a target="_blank" href="'+link+'" style="position: absolute; top: 0; left: 50%; font-size: 25px;font-weight: lighter;background: green;">去广告</a>';
-		$('.page-container').append(outputb2);
- 	 }
-    catch(err) {
-
-	}
 }
 
 function removeMsg(){
@@ -27,16 +18,33 @@ function blockAjax(){
     script.appendChild(code);
     document.getElementsByTagName('body')[0].appendChild(script);
 }
-//$("body").trigger("filterAds");
-document.addEventListener('DOMContentLoaded', function() {
-	blockAjax();
+
+function addButton(){
+    try{
+    	var link = $('video#video_player')[0].attributes['src'].value;
+	    var outputb2 = '<a target="_blank" href="'+link+'" style="position: absolute; top: 0; left: 50%; font-size: 25px;font-weight: lighter;background: green;">去广告</a>';
+		$('.page-container').append(outputb2);
+ 	 }
+    catch(err) {
+	}
+}
+
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded',afterDOMLoaded);
+} else {
+    afterDOMLoaded();
+}
+
+function afterDOMLoaded(){
+   	blockAjax();
     setTimeout(jumpAd, 4000);
-    setTimeout(removeMsg, 1000);	
+    setTimeout(removeMsg, 1000);
+    setInterval(addButton, 4000);	
 	try {
 		$('div .tgg').remove();
 		$('div .gg').remove();
-		$('div #myaudient2').remove();
-		$('div #msg_winw').remove();
+		$('div#myaudient2').remove();
+		$('div#msg_winw').remove();
 		$('div .ggw').remove();
 		$('div .foot').remove();
 		$('div .foot1').remove();
@@ -51,4 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	catch(err) {
 
 	}
-});
+}
