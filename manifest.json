@@ -3,7 +3,7 @@
 
   "name": "多瑙影院净化器",
   "description": "去除多瑙影院广告和无用界面，更专心看视频",
-  "version": "1.7",
+  "version": "1.8",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -15,8 +15,7 @@
     "webRequestBlocking",
     "*://*.dnvod.tv/*",
     "*://*.dnvod.eu/*",
-    "*://*.duonao.tv/*",
-    "tabs"
+    "*://*.duonao.tv/*"
   ],
   "background": {
     "scripts": ["background.js"]
