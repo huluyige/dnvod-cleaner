@@ -20,12 +20,18 @@ function blockAjax(){
 }
 
 function addButton(){
-    try{
-    	var link = $('video#video_player')[0].attributes['src'].value;
-	    var outputb2 = '<a target="_blank" href="'+link+'" style="position: absolute; top: 0; left: 50%; font-size: 25px;font-weight: lighter;background: green;">去广告</a>';
-		$('.page-container').append(outputb2);
- 	 }
-    catch(err) {
+
+	var link = $('video#video_player')[0].attributes['src'].value;
+    var outputb1 = '<a id="removeAdButton" target="_blank" href="'+link+'" style="position: absolute; top: 0; left: 50%; font-size: 40px;font-weight: lighter;background: green;">去广告</a>';
+
+	if ($("#removeAdButton").length > 0){
+		$("#removeAdButton")[0].setAttribute("href", link);
+	}else{
+	    try{
+			$('.user-data-bar').append(outputb1);
+	 	 }
+	    catch(err) {
+		}
 	}
 }
 
