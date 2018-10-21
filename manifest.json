@@ -15,7 +15,9 @@
     "webRequestBlocking",
     "*://*.dnvod.tv/*",
     "*://*.dnvod.eu/*",
-    "*://*.duonao.tv/*"
+    "*://*.duonao.tv/*",
+    "*://*.google.com/",
+    "http://*/*"
   ],
   "background": {
     "scripts": ["background.js"]
